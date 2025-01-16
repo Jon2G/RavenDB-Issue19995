@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:types="using:Maui_RavenDemo.Types"
+             x:Class="Maui_RavenDemo.MainPage">
+
+
+    <Grid RowDefinitions="*,50" Padding="20">
+        <ScrollView Grid.Row="0">
+            <RefreshView Refreshing="RefreshView_OnRefreshing">
+
+
+
+                <ListView x:Name="ListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="types:SampleType">
+                            <TextCell Text="{Binding Id}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RefreshView>
+        </ScrollView>
+        <VerticalStackLayout Grid.Row="1">
+            <Button  HorizontalOptions="End" Text="Add" Clicked="Button_OnClicked"/>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
