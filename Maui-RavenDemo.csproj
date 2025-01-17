@@ -19,7 +19,7 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-
+<UseNativeHttpHandler>false</UseNativeHttpHandler>
 		<!-- Display name -->
 		<ApplicationTitle>Maui-RavenDemo</ApplicationTitle>
 
